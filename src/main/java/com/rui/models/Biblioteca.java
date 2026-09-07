@@ -83,12 +83,12 @@ public class Biblioteca {
         return emprestimos;
     }
 
-    public void addEmprestimo(Integer livroId){
+    public void addEmprestimo(Integer livroId, String nome){
         Livro livro = getLivroById(livroId);
 
         livro.setDisponivel(false);
 
-        emprestimos.add(new Emprestimo(emprestimos.size(), livro, "Rui", LocalDate.now(), LocalDate.now().plusDays(7)));
+        emprestimos.add(new Emprestimo(emprestimos.size(), livro, nome, LocalDate.now(), LocalDate.now().plusDays(7)));
     }
 
     public void setEmprestimos(List<Emprestimo> emprestimos) {

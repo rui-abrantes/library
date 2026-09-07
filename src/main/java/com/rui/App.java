@@ -40,7 +40,11 @@ public class App {
 
             System.out.println("O livro " + livroParEmprestimo.getTitulo() + " vai ser emprestado");
 
-            biblioteca.addEmprestimo(livroId);
+            System.out.println("Qual o seu nome ?");
+
+            String nome = scanner.nextLine();
+
+            biblioteca.addEmprestimo(livroId, nome);
         }
         System.out.println("Obrigado e volte sempre.");
     }
